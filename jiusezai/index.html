@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jiuse在线-设计灵感与视觉素材分享平台</title>
+    <meta name="description" content="jiuse在线是一个专注于色彩搭配、视觉灵感与创意素材分享的专业平台，提供丰富的配色方案、设计案例、工具推荐和行业资讯，帮助设计师与创意工作者高效获取灵感。">
+    <meta name="keywords" content="jiuse在线,色彩搭配,配色方案,视觉设计,设计灵感,创意素材,色彩工具">
+    <style>
+        /* ===== 全局重置与基础 ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f6f7fb;
+            color: #1e1e2f;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== 页眉 ===== */
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e9eaf0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #7b5cff 0%, #ff6b9d 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #fff;
+            font-size: 18px;
+        }
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #7b5cff, #ff6b9d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 32px;
+        }
+        .main-nav a {
+            font-weight: 500;
+            color: #2d2d44;
+            transition: color 0.2s;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+        }
+        .main-nav a:hover {
+            color: #7b5cff;
+            border-bottom-color: #7b5cff;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f2f3f7;
+            border-radius: 40px;
+            padding: 6px 6px 6px 16px;
+            width: 230px;
+        }
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            flex: 1;
+            font-size: 0.9rem;
+        }
+        .search-box button {
+            background: #7b5cff;
+            border: none;
+            color: #fff;
+            border-radius: 30px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+        .btn-outline {
+            border: 1px solid #d0d2e0;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            background: #fff;
+        }
+        .btn-outline:hover {
+            border-color: #7b5cff;
+            color: #7b5cff;
+        }
+
+        /* ===== 移动端导航 ===== */
+        .nav-toggle {
+            display: none;
+            font-size: 1.6rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1e1e2f;
+        }
+
+        /* ===== Hero 首屏 ===== */
+        .hero {
+            background: linear-gradient(145deg, #f0edff 0%, #fdf2f6 100%);
+            padding: 72px 0 64px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(123,92,255,0.08) 0%, transparent 70%);
+            top: -120px;
+            right: -100px;
+            border-radius: 50%;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 48px;
+        }
+        .hero-copy h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+        .hero-copy h1 span {
+            background: linear-gradient(135deg, #7b5cff, #ff6b9d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-desc {
+            font-size: 1.2rem;
+            color: #4a4a5e;
+            margin-bottom: 28px;
+            line-height: 1.7;
+            max-width: 520px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 36px;
+        }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e1e2f;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6b6b80;
+        }
+        .hero-visual {
+            background: #fff;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            position: relative;
+            z-index: 2;
+        }
+        .palette-demo {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .palette-color {
+            height: 90px;
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .palette-color:hover {
+            transform: scale(1.03);
+        }
+        .palette-code {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .palette-tag {
+            background: #f0f0f5;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+        }
+        .hero-btn-row {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #7b5cff;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn-primary:hover {
+            background: #6a4ae0;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #7b5cff;
+            color: #7b5cff;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover {
+            background: #7b5cff;
+            color: #fff;
+        }
+
+        /* ===== 分类导航 ===== */
+        .section {
+            padding: 64px 0;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 36px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .section-link {
+            color: #7b5cff;
+            font-weight: 500;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: all 0.25s;
+            border: 1px solid #f0f0f0;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            border-color: #e0d9ff;
+        }
+        .cat-icon {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+        .cat-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .cat-count {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* ===== 内容卡片网格 ===== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+            transition: transform 0.25s, box-shadow 0.25s;
+            border: 1px solid #f0f0f0;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 30px rgba(0,0,0,0.06);
+        }
+        .card-thumb {
+            height: 180px;
+            background: #eaeaf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #aaa;
+        }
+        .card-body {
+            padding: 18px;
+        }
+        .card-cat {
+            font-size: 0.8rem;
+            color: #7b5cff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .card-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 8px 0;
+            line-height: 1.4;
+        }
+        .card-desc {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #aaa;
+            border-top: 1px solid #f2f2f2;
+            padding-top: 10px;
+        }
+
+        /* ===== 特色调色板 ===== */
+        .featured-palette {
+            background: #fff;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        }
+        .palette-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .palette-swatch {
+            flex: 1;
+            min-width: 80px;
+            height: 70px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 6px;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* ===== 工具推荐 ===== */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .tool-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.2s;
+        }
+        .tool-card:hover {
+            border-color: #c9bbff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .tool-icon {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+        }
+        .tool-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .tool-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .tool-link {
+            color: #7b5cff;
+            font-weight: 500;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #efeff5;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-question::before {
+            content: 'Q';
+            background: #7b5cff;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 36px;
+            line-height: 1.7;
+        }
+        .faq-answer::before {
+            content: 'A';
+            background: #ff6b9d;
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #1b1b2a;
+            color: #a0a0b4;
+            padding: 48px 0 24px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .footer-title {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid #2c2c40;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6a6a80;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .category-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .hero-copy h1 {
+                font-size: 2.6rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                padding: 20px 24px;
+                border-top: 1px solid #f0f0f0;
+            }
+            .main-nav.active {
+                display: block;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .search-box {
+                display: none;
+            }
+            .header-actions .btn-outline {
+                display: none;
+            }
+            .cards-grid,
+            .tools-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-copy h1 {
+                font-size: 2.2rem;
+            }
+            .section {
+                padding: 48px 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .cards-grid,
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- ========== 页眉 ========== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="brand-icon">J</div>
+                <span class="brand-name">jiuse在线</span>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">配色灵感</a></li>
+                    <li><a href="#">设计素材</a></li>
+                    <li><a href="#">色彩工具</a></li>
+                    <li><a href="#">灵感文章</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索配色或灵感...">
+                    <button>搜索</button>
+                </div>
+                <button class="btn-outline">收藏夹</button>
+                <button class="nav-toggle" id="navToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== Hero 首屏 ========== -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1>发现色彩<br>激发<span>创意灵感</span></h1>
+                    <p class="hero-desc">jiuse在线汇聚全球优质配色方案、设计案例与色彩工具，为设计师、插画师和创意工作者提供一站式的灵感参考平台。</p>
+                    <div class="hero-btn-row">
+                        <button class="btn-primary">开始探索</button>
+                        <button class="btn-secondary">热门配色</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">50K+</span>
+                            <span class="stat-label">配色方案</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">8K+</span>
+                            <span class="stat-label">设计案例</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">20+</span>
+                            <span class="stat-label">实用工具</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="palette-demo">
+                        <div class="palette-color" style="background:#FF6B9D;"></div>
+                        <div class="palette-color" style="background:#7B5CFF;"></div>
+                        <div class="palette-color" style="background:#FFB347;"></div>
+                        <div class="palette-color" style="background:#4ECDC4;"></div>
+                        <div class="palette-color" style="background:#2D2D44;"></div>
+                    </div>
+                    <div class="palette-code">
+                        <div class="palette-tag">#时尚渐变</div>
+                        <span>点击色块复制</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 分类导航 ========== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">灵感分类</h2>
+                    <a href="#" class="section-link">查看全部 →</a>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="cat-icon">🎨</div>
+                        <div class="cat-name">平面设计</div>
+                        <div class="cat-count">1,248 个灵感</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">🖌️</div>
+                        <div class="cat-name">插画绘画</div>
+                        <div class="cat-count">876 个灵感</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">🌐</div>
+                        <div class="cat-name">网页设计</div>
+                        <div class="cat-count">1,564 个灵感</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">📱</div>
+                        <div class="cat-name">UI/UX</div>
+                        <div class="cat-count">932 个灵感</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">🏠</div>
+                        <div class="cat-name">室内设计</div>
+                        <div class="cat-count">654 个灵感</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon">📷</div>
+                        <div class="cat-name">摄影调色</div>
+                        <div class="cat-count">1,102 个灵感</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 热门配色方案 ========== -->
+        <section class="section" style="background:#fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">热门配色方案</h2>
+                    <a href="#" class="section-link">更多方案 →</a>
+                </div>
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-thumb" style="background: linear-gradient(135deg,#FAD0C4,#FFD1FF);">🌸</div>
+                        <div class="card-body">
+                            <div class="card-cat">柔和系</div>
+                            <h3 class="card-title">樱花粉雾渐变</h3>
+                            <p class="card-desc">适合女性向品牌、美妆、甜品店等场景</p>
+                            <div class="card-meta">
+                                <span>❤️ 2.3k</span>
+                                <span>收藏</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-thumb" style="background: linear-gradient(135deg,#0F2027,#2C5364);">🌊</div>
+                        <div class="card-body">
+                            <div class="card-cat">深色调</div>
+                            <h3 class="card-title">深海蓝紫暗调</h3>
+                            <p class="card-desc">科技感、高端商务、夜景主题设计</p>
+                            <div class="card-meta">
+                                <span>❤️ 1.9k</span>
+                                <span>收藏</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-thumb" style="background: linear-gradient(135deg,#F6D365,#FDA085);">☀️</div>
+                        <div class="card-body">
+                            <div class="card-cat">暖色系</div>
+                            <h3 class="card-title">落日暖橙渐变</h3>
+                            <p class="card-desc">餐饮品牌、活动海报、夏日主题</p>
+                            <div class="card-meta">
+                                <span>❤️ 3.1k</span>
+                                <span>收藏</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-thumb" style="background: linear-gradient(135deg,#A8E063,#56AB2F);">🌿</div>
+                        <div class="card-body">
+                            <div class="card-cat">自然系</div>
+                            <h3 class="card-title">清新草木绿调</h3>
+                            <p class="card-desc">环保、健康、户外品牌常用搭配</p>
+                            <div class="card-meta">
+                                <span>❤️ 1.6k</span>
+                                <span>收藏</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 精选调色板 ========== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">编辑精选调色板</h2>
+                    <a href="#" class="section-link">查看全部 →</a>
+                </div>
+                <div class="featured-palette">
+                    <div class="palette-row">
+                        <div class="palette-swatch" style="background:#2D2D44;">#2D2D44</div>
+                        <div class="palette-swatch" style="background:#7B5CFF;">#7B5CFF</div>
+                        <div class="palette-swatch" style="background:#FF6B9D;">#FF6B9D</div>
+                        <div class="palette-swatch" style="background:#FFB347;">#FFB347</div>
+                        <div class="palette-swatch" style="background:#4ECDC4;">#4ECDC4</div>
+                    </div>
+                    <p style="color:#666; font-size:0.95rem;">「创意无界」调色板 —— 适合创意工作室、设计博客、个人品牌等场景，活泼而富有张力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 设计工具推荐 ========== -->
+        <section class="section" style="background:#fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">实用色彩工具</h2>
+                    <a href="#" class="section-link">全部工具 →</a>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🎯</div>
+                        <h3 class="tool-name">配色生成器</h3>
+                        <p class="tool-desc">输入基础色，自动生成和谐配色方案，支持多种配色规则选择，快速获得专业搭配。</p>
+                        <a href="#" class="tool-link">立即使用 →</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">🔍</div>
+                        <h3 class="tool-name">色号查询</h3>
+                        <p class="tool-desc">提供 Hex、RGB、CMYK、HSL 等多种色号格式互转，输入即可快速识别与转换。</p>
+                        <a href="#" class="tool-link">立即使用 →</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">📊</div>
+                        <h3 class="tool-name">对比度检测</h3>
+                        <p class="tool-desc">检测文字与背景的对比度是否满足 WCAG 无障碍标准，提升设计可读性。</p>
+                        <a href="#" class="tool-link">立即使用 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 灵感文章 ========== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">灵感文章</h2>
+                    <a href="#" class="section-link">更多文章 →</a>
+                </div>
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-thumb" style="background:#E8E8F0;">📖</div>
+                        <div class="card-body">
+                            <div class="card-cat">设计趋势</div>
+                            <h3 class="card-title">2025年网页设计色彩趋势前瞻</h3>
+                            <p class="card-desc">探讨未来一年网页设计中值得关注的色彩方向与搭配灵感。</p>
+                            <div class="card-meta">
+                                <span>📅 2025-01-12</span>
+                                <span>阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-thumb" style="background:#E8E8F0;">💡</div>
+                        <div class="card-body">
+                            <div class="card-cat">设计技巧</div>
+                            <h3 class="card-title">如何快速建立品牌色彩系统</h3>
+                            <p class="card-desc">从核心色到辅助色，教你搭建一套可延展的品牌配色体系。</p>
+                            <div class="card-meta">
+                                <span>📅 2025-01-08</span>
+                                <span>阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-thumb" style="background:#E8E8F0;">🎨</div>
+                        <div class="card-body">
+                            <div class="card-cat">案例分析</div>
+                            <h3 class="card-title">高级感配色案例分析：从大牌设计学色彩</h3>
+                            <p class="card-desc">拆解多个知名品牌的配色逻辑，理解高级感背后的色彩原理。</p>
+                            <div class="card-meta">
+                                <span>📅 2025-01-02</span>
+                                <span>阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-thumb" style="background:#E8E8F0;">🛠️</div>
+                        <div class="card-body">
+                            <div class="card-cat">工具教程</div>
+                            <h3 class="card-title">设计师必备的6款免费色彩工具</h3>
+                            <p class="card-desc">盘点高效实用的色彩类工具，提升你的日常设计工作效率。</p>
+                            <div class="card-meta">
+                                <span>📅 2024-12-28</span>
+                                <span>阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section class="section" style="background:#fff;">
+            <div class="container">
+                <h2 class="section-title" style="text-align:center;margin-bottom:40px;">常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">jiuse在线提供哪些类型的配色方案？</div>
+                        <div class="faq-answer">平台涵盖平面设计、网页设计、插画、UI/UX、室内设计、摄影调色等多个领域的配色方案，每种方案都附带具体的色号信息和适用场景说明，方便直接取用。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何快速找到适合我项目的配色？</div>
+                        <div class="faq-answer">您可以通过顶部的分类导航进入对应领域，也可以使用搜索框输入关键词（如“科技感”“柔和”“复古”等）进行筛选。每条配色方案都标注了风格标签，方便快速定位。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">网站上的配色方案可以免费使用吗？</div>
+                        <div class="faq-answer">平台上展示的配色方案均提供色号信息，可以直接应用于个人或商业项目。部分由用户上传的案例可能涉及原创设计，建议参考配色思路而非直接复制整体设计。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">我如何上传自己的配色作品？</div>
+                        <div class="faq-answer">注册登录后，在个人中心点击“上传作品”，按照指引填写配色色号、风格标签和描述即可。审核通过后，您的作品将展示在对应分类中。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">jiuse在线</div>
+                    <p class="footer-desc">专注色彩灵感与设计素材分享，助力每一位创意工作者高效产出优秀作品。</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">快速导航</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">配色灵感</a></li>
+                        <li><a href="#">设计素材</a></li>
+                        <li><a href="#">色彩工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">帮助支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">使用帮助</a></li>
+                        <li><a href="#">上传指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">关注我们</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">小红书</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 jiuse在线 版权所有 · 本平台内容仅供学习交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 移动端导航切换 -->
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            var nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+  </html>
