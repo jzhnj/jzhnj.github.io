@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silk美式豆奶-营养早餐与植物蛋白饮品的品质之选</title>
+    <meta name="description" content="深入了解silk美式豆奶的产品特点、营养成分、饮用场景与选购指南。探索这款融合美式工艺与植物营养的豆奶饮品，为你的健康饮食提供新选择。">
+    <meta name="keywords" content="silk美式豆奶,silk豆奶,美式豆奶,植物蛋白饮品,豆奶品牌,早餐豆奶,健康饮品,无乳糖饮品">
+    <link rel="stylesheet" href="data:text/css,/* 预留样式占位 */">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif; background: #f9f8f4; color: #3a3a3a; line-height: 1.7; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* 布局 */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* 页眉 */
+        .site-header { background: #ffffff; border-bottom: 1px solid #eae6dd; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; flex-wrap: wrap; }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 40px; height: 40px; background: #4a7c59; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 18px; }
+        .logo-text { font-size: 24px; font-weight: 700; color: #2d3e2f; letter-spacing: 1px; }
+        .logo-text span { color: #4a7c59; }
+
+        .main-nav ul { display: flex; gap: 30px; flex-wrap: wrap; }
+        .main-nav a { font-size: 15px; color: #4a4a4a; font-weight: 500; padding: 5px 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+        .main-nav a:hover { color: #4a7c59; border-bottom-color: #4a7c59; }
+
+        /* 首屏 */
+        .hero { background: linear-gradient(135deg, #f0f5ea 0%, #e2ecdc 100%); padding: 70px 0; margin-bottom: 50px; }
+        .hero-content { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .hero-text { flex: 1 1 400px; }
+        .hero-text h1 { font-size: 40px; color: #2d3e2f; margin-bottom: 20px; line-height: 1.3; }
+        .hero-text p { font-size: 17px; color: #555; margin-bottom: 15px; }
+        .hero-badge { display: inline-block; background: #4a7c59; color: #fff; padding: 6px 16px; border-radius: 30px; font-size: 14px; margin-bottom: 18px; }
+        .hero-image { flex: 1 1 300px; text-align: center; }
+        .product-visual { background: #ffffff; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(74,124,89,0.15); max-width: 320px; margin: 0 auto; }
+        .product-visual .bottle { font-size: 60px; margin-bottom: 10px; }
+        .product-visual .name { font-weight: 700; font-size: 20px; color: #2d3e2f; }
+        .product-visual .desc { color: #777; font-size: 14px; }
+
+        /* 栏目标题 */
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 30px; color: #2d3e2f; margin-bottom: 8px; }
+        .section-title p { color: #7a7a7a; font-size: 15px; }
+
+        /* 特色卡片 */
+        .features { padding: 50px 0; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+        .feature-card { background: #fff; border-radius: 16px; padding: 30px 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.04); border-top: 4px solid #4a7c59; transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .feature-card .icon { font-size: 40px; margin-bottom: 15px; }
+        .feature-card h3 { font-size: 18px; margin-bottom: 10px; color: #2d3e2f; }
+        .feature-card p { font-size: 14px; color: #666; }
+
+        /* 产品系列 */
+        .product-line { background: #fff; padding: 60px 0; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .product-item { border: 1px solid #eee; border-radius: 16px; padding: 25px; transition: 0.3s; background: #fcfcf9; }
+        .product-item:hover { border-color: #4a7c59; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
+        .product-item .tag { display: inline-block; background: #eaf1e6; color: #4a7c59; font-size: 12px; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; font-weight: 600; }
+        .product-item h3 { font-size: 20px; margin-bottom: 8px; }
+        .product-item .spec { color: #999; font-size: 13px; margin-bottom: 10px; }
+        .product-item .desc { font-size: 14px; color: #666; }
+
+        /* 营养表格 */
+        .nutrition { padding: 60px 0; background: #f9f8f4; }
+        .nutri-wrap { display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start; }
+        .nutri-content { flex: 1 1 350px; }
+        .nutri-content h3 { font-size: 24px; margin-bottom: 15px; color: #2d3e2f; }
+        .nutri-content p { margin-bottom: 12px; color: #555; }
+        .nutri-table-wrap { flex: 1 1 400px; background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+        .nutri-table { width: 100%; border-collapse: collapse; }
+        .nutri-table th { background: #4a7c59; color: #fff; padding: 10px; text-align: left; font-size: 14px; }
+        .nutri-table td { padding: 10px; border-bottom: 1px solid #f0ede5; font-size: 14px; }
+        .nutri-table tr:last-child td { border-bottom: none; }
+        .nutri-table td:first-child { font-weight: 600; }
+
+        /* 饮用场景 */
+        .scenes { padding: 60px 0; }
+        .scene-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .scene-card { background: #fff; border-radius: 14px; padding: 25px; border-left: 5px solid #a8c3a0; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+        .scene-card h4 { font-size: 17px; margin-bottom: 8px; color: #2d3e2f; }
+        .scene-card p { font-size: 14px; color: #666; }
+
+        /* 选购指南 */
+        .guide { background: #eef3ea; padding: 60px 0; }
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .guide-step { background: #fff; border-radius: 16px; padding: 25px; position: relative; }
+        .guide-step .num { font-size: 30px; font-weight: 800; color: #dce6d8; position: absolute; top: 15px; right: 20px; }
+        .guide-step h3 { font-size: 17px; margin-bottom: 10px; color: #2d3e2f; }
+        .guide-step p { font-size: 14px; color: #555; }
+
+        /* FAQ */
+        .faq { padding: 60px 0; }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: #fff; border-radius: 12px; margin-bottom: 15px; padding: 20px 25px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+        .faq-item h3 { font-size: 17px; color: #2d3e2f; margin-bottom: 8px; cursor: pointer; position: relative; padding-right: 30px; }
+        .faq-item h3::after { content: '+'; position: absolute; right: 0; top: 0; font-size: 22px; color: #4a7c59; font-weight: 400; }
+        .faq-item.open h3::after { content: '-'; }
+        .faq-item p { font-size: 15px; color: #555; display: none; padding-top: 10px; border-top: 1px solid #f0ede5; }
+        .faq-item.open p { display: block; }
+
+        /* 页脚 */
+        .site-footer { background: #2d3e2f; color: #cdd9c9; padding: 40px 0 20px; }
+        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+        .footer-col h4 { color: #fff; margin-bottom: 15px; font-size: 16px; }
+        .footer-col p, .footer-col li { font-size: 14px; line-height: 2; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #4a5a4c; margin-top: 30px; font-size: 13px; }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 15px; text-align: center; }
+            .main-nav ul { justify-content: center; gap: 20px; }
+            .hero { padding: 40px 0; }
+            .hero-text h1 { font-size: 30px; }
+            .section-title h2 { font-size: 24px; }
+            .feature-grid, .product-grid, .scene-grid, .guide-grid { grid-template-columns: 1fr; }
+            .nutri-wrap { flex-direction: column; }
+            .hero-content { gap: 30px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 15px; }
+            .logo-text { font-size: 20px; }
+            .main-nav a { font-size: 14px; }
+            .main-nav ul { gap: 15px; }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo-area">
+            <div class="logo-icon">S</div>
+            <div class="logo-text">Silk<span>美式豆奶</span></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#features">品牌特色</a></li>
+                <li><a href="#products">产品系列</a></li>
+                <li><a href="#nutrition">营养成分</a></li>
+                <li><a href="#scenes">饮用场景</a></li>
+                <li><a href="#guide">选购指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">植物蛋白 · 无乳糖 · 美式工艺</span>
+                <h1>silk美式豆奶，感受纯粹植物营养的醇香</h1>
+                <p>源自北美的植物基饮品品牌，silk美式豆奶以非转基因大豆为原料，通过先进研磨工艺，保留大豆天然营养，口感丝滑细腻，适合全家人每天享用。</p>
+                <p>无论是搭配早餐麦片、制作拿铁，还是运动后补充，它都是现代健康生活方式的理想选择。</p>
+            </div>
+            <div class="hero-image">
+                <div class="product-visual">
+                    <div class="bottle">🥛</div>
+                    <div class="name">Silk 美式豆奶</div>
+                    <div class="desc">原味 / 香草味 / 巧克力味</div>
+                    <div style="margin-top:12px;font-size:13px;color:#4a7c59;font-weight:600;">丝滑口感 · 每瓶含8g植物蛋白</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌特色 -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>为什么选择 silk美式豆奶？</h2>
+                <p>从原料到工艺，每一步都为了更好的植物营养</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">🌱</div>
+                    <h3>非转基因大豆</h3>
+                    <p>精选优质非转基因大豆，从源头保障原料纯净与品质，每一口都安心。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🥤</div>
+                    <h3>美式研磨工艺</h3>
+                    <p>采用精细研磨与均质技术，豆奶口感丝滑细腻，没有豆腥味，更易入口。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💪</div>
+                    <h3>优质植物蛋白</h3>
+                    <p>每份提供约8克植物蛋白，支持日常营养所需，适合乳糖不耐受人群。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚖️</div>
+                    <h3>0胆固醇 低饱和脂肪</h3>
+                    <p>天然植物来源，不含胆固醇，饱和脂肪含量低，轻负担更健康。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品系列 -->
+    <section class="product-line" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>产品系列一览</h2>
+                <p>多种口味满足不同味蕾与场景需求</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-item">
+                    <span class="tag">经典原味</span>
+                    <h3>Silk 原味美式豆奶</h3>
+                    <p class="spec">净含量：946ml / 250ml</p>
+                    <p class="desc">豆香纯粹自然，口感清爽顺滑。适合日常饮用、搭配咖啡或麦片，是百搭的基础款。</p>
+                </div>
+                <div class="product-item">
+                    <span class="tag">香草风味</span>
+                    <h3>Silk 香草味豆奶</h3>
+                    <p class="spec">净含量：946ml / 250ml</p>
+                    <p class="desc">在豆奶基础上融入天然香草提取物，香气柔和甜美，冷饮热饮都别有风味。</p>
+                </div>
+                <div class="product-item">
+                    <span class="tag">巧克力风味</span>
+                    <h3>Silk 巧克力豆奶</h3>
+                    <p class="spec">净含量：250ml（便携装）</p>
+                    <p class="desc">浓郁可可与豆奶的巧妙结合，口感醇厚，是运动后或下午茶的能量补充选择。</p>
+                </div>
+                <div class="product-item">
+                    <span class="tag">无添加蔗糖</span>
+                    <h3>Silk 低糖原味豆奶</h3>
+                    <p class="spec">净含量：946ml</p>
+                    <p class="desc">不添加蔗糖，适合关注糖分摄入的人群。清甜来自大豆本身，保留原始营养。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 营养成分 -->
+    <section class="nutrition" id="nutrition">
+        <div class="container nutri-wrap">
+            <div class="nutri-content">
+                <h3>营养成分与健康价值</h3>
+                <p>silk美式豆奶不仅是一款美味的植物饮品，更是均衡饮食中的优质营养来源。每250ml的silk原味豆奶大约含有：</p>
+                <p>✔ 8克植物蛋白 —— 有助于肌肉的维持与修复<br>
+                   ✔ 4克膳食纤维 —— 促进肠道健康<br>
+                   ✔ 丰富的钙与维生素D —— 支持骨骼健康<br>
+                   ✔ 维生素A、B2、B12 —— 维持正常新陈代谢</p>
+                <p>对于乳糖不耐受者、素食人群以及希望减少动物脂肪摄入的人来说，silk美式豆奶是牛奶的理想替代品之一。</p>
+            </div>
+            <div class="nutri-table-wrap">
+                <h3 style="text-align:center;margin-bottom:15px;font-size:18px;">营养成分参考（每250ml）</h3>
+                <table class="nutri-table">
+                    <tr><th>项目</th><th>含量</th><th>每100ml</th></tr>
+                    <tr><td>能量</td><td>约120kcal</td><td>48kcal</td></tr>
+                    <tr><td>蛋白质</td><td>8g</td><td>3.2g</td></tr>
+                    <tr><td>脂肪</td><td>4g</td><td>1.6g</td></tr>
+                    <tr><td>碳水化合物</td><td>12g</td><td>4.8g</td></tr>
+                    <tr><td>膳食纤维</td><td>1g</td><td>0.4g</td></tr>
+                    <tr><td>钙</td><td>300mg</td><td>120mg</td></tr>
+                    <tr><td>钠</td><td>100mg</td><td>40mg</td></tr>
+                </table>
+                <p style="font-size:12px;color:#999;margin-top:10px;">*以上为典型值，不同口味略有差异，请以包装标签为准。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 饮用场景 -->
+    <section class="scenes" id="scenes">
+        <div class="container">
+            <div class="section-title">
+                <h2>silk美式豆奶的多样饮用场景</h2>
+                <p>融入日常生活的每一刻</p>
+            </div>
+            <div class="scene-grid">
+                <div class="scene-card">
+                    <h4>🍞 营养早餐搭档</h4>
+                    <p>搭配全麦面包、燕麦片或水果，一杯silk豆奶提供充足蛋白质与能量，开启活力早晨。</p>
+                </div>
+                <div class="scene-card">
+                    <h4>☕ 咖啡拉花新选择</h4>
+                    <p>豆奶与浓缩咖啡混合，制作出香浓的豆奶拿铁。蒸汽打发后奶泡绵密，风味独特。</p>
+                </div>
+                <div class="scene-card">
+                    <h4>🏃 运动后补充</h4>
+                    <p>巧克力口味含适量碳水化合物与蛋白质，适合运动后快速补充能量，帮助恢复体力。</p>
+                </div>
+                <div class="scene-card">
+                    <h4>👨‍👩‍👧 家庭健康饮品</h4>
+                    <p>不含乳糖，乳糖不耐受的家人也能安心饮用。儿童、老人都可以每天适量享用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 选购指南 -->
+    <section class="guide" id="guide">
+        <div class="container">
+            <div class="section-title">
+                <h2>如何选择适合你的silk豆奶？</h2>
+                <p>根据口味偏好与饮用需求挑选</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-step">
+                    <span class="num">01</span>
+                    <h3>明确你的口味偏好</h3>
+                    <p>喜欢原汁原味选原味款；喜欢甜香可选香草味；偏爱浓郁口感则巧克力味是首选。如果控糖，可选择低糖原味。</p>
+                </div>
+                <div class="guide-step">
+                    <span class="num">02</span>
+                    <h3>考虑饮用场合</h3>
+                    <p>家庭饮用建议购买946ml大包装，性价比更高；外出携带或办公室存放可选250ml便携装，方便即饮。</p>
+                </div>
+                <div class="guide-step">
+                    <span class="num">03</span>
+                    <h3>关注营养需求</h3>
+                    <p>如果注重高蛋白，所有口味蛋白含量一致；需要控糖则选择无添加蔗糖版本；普通人群按喜好即可。</p>
+                </div>
+                <div class="guide-step">
+                    <span class="num">04</span>
+                    <h3>留意保存方式</h3>
+                    <p>未开封的silk豆奶常温避光保存即可，开封后需冷藏并建议在7天内饮用完毕，风味更佳。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于silk美式豆奶的常见问题</h2>
+                <p>解答你的疑惑</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>silk美式豆奶和普通豆浆有什么区别？</h3>
+                    <p>silk美式豆奶在工艺上更精细，口感更顺滑，通常添加了钙、维生素等强化营养，且蛋白质含量稳定。普通豆浆多为现磨或简单加工，成分相对单一。silk美式豆奶经过标准化生产，品质更稳定。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>乳糖不耐受的人可以喝silk豆奶吗？</h3>
+                    <p>完全可以。silk美式豆奶是100%植物基饮品，不含乳糖，适合乳糖不耐受人群。同时它也是纯素饮品，不含任何动物成分。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>silk豆奶需要冷藏保存吗？</h3>
+                    <p>未开封的产品可以在阴凉干燥处常温保存。开封后请放入冰箱冷藏，并尽量在5-7天内饮用完，以保证新鲜口感。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>silk美式豆奶的蛋白质含量高吗？</h3>
+                    <p>每250ml含有约8克植物蛋白，与一杯牛奶的蛋白质含量相当。作为植物蛋白来源，它是不错的日常营养补充。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>儿童可以每天喝silk豆奶吗？</h3>
+                    <p>可以。silk豆奶营养丰富且不含乳糖，适合作为儿童日常饮品的一部分。但建议均衡饮食，与其他食物搭配，确保营养全面。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>silk豆奶可以用来烹饪或烘焙吗？</h3>
+                    <p>当然可以。它可以用在烘焙、制作酱汁、奶昔等各类料理中，替代牛奶使用，为菜肴增添植物香气。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于 Silk 美式豆奶</h4>
+                <p>我们致力于提供美味、营养且可持续的植物基饮品，让每个人都能轻松享受健康生活。</p>
+            </div>
+            <div class="footer-col">
+                <h4>热门产品</h4>
+                <ul>
+                    <li>原味豆奶</li>
+                    <li>香草味豆奶</li>
+                    <li>巧克力豆奶</li>
+                    <li>低糖原味豆奶</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系与支持</h4>
+                <ul>
+                    <li>消费者热线：400-800-1234</li>
+                    <li>服务时间：周一至周五 9:00-18:00</li>
+                    <li>邮箱：support@silk-demo.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 silk美式豆奶品牌信息展示页 · 本页面仅为产品介绍与分享，不构成购买建议</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ 折叠交互
+    document.querySelectorAll('.faq-item h3').forEach(function(question) {
+        question.addEventListener('click', function() {
+            var item = this.parentElement;
+            var isOpen = item.classList.contains('open');
+            // 关闭所有项
+            document.querySelectorAll('.faq-item').forEach(function(i) {
+                i.classList.remove('open');
+            });
+            // 如果点击前没打开，则打开当前项
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
